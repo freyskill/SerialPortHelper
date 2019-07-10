@@ -12,9 +12,10 @@ android {
         versionName "1.0"
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        ndk {
-            moduleName "<app>"
-            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        externalNativeBuild {
+            cmake {
+                cppFlags ""
+            }
         }
     }
 
