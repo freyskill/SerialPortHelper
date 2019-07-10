@@ -1,6 +1,6 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'//this
-group='com.github.freyskill'//this
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.freyskill'
 android {
     compileSdkVersion 28
 
