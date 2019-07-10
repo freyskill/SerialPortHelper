@@ -1,5 +1,4 @@
-# SerialPortHelper
-# SerialPortHelper
+# SerialPortHelper（Android串口通信）
 
 Android串口通讯助手可以用于需要使用串口通信的Android外设，该库有如下特点：
 
