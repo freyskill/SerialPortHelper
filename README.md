@@ -1,4 +1,5 @@
 # SerialPortHelper
+# SerialPortHelper
 
 Android串口通讯助手可以用于需要使用串口通信的Android外设，该库有如下特点：
 
@@ -8,7 +9,7 @@ Android串口通讯助手可以用于需要使用串口通信的Android外设，
 4. 支持超时设置，设置超时时间后，如果命令在设置的时间内未反馈，则会根据设置的操作进行重发或退出该命令；
 5. 支持超时重发（可以N次重发，具体按需设置）与退出，退出会调用接收回调的 **onComplete** 方法。
 
-##### 1、DEMO演示
+### 1、DEMO演示
 
 使用该库简单实现的串口调试助手工具，[APK下载](https://github.com/freyskill/SerialPortHelper/blob/master/SerialPortHelperV1.0.1.apk)
 
@@ -16,9 +17,9 @@ Android串口通讯助手可以用于需要使用串口通信的Android外设，
 
 
 
-##### 2、接入方式
+### 2、接入方式
 
-Step 1. Add the JitPack repository to your build file
+#### Step 1. Add the JitPack repository to your build file
 
 Add it in your root **build.gradle** at the end of repositories:
 
@@ -31,7 +32,7 @@ allprojects {
 }
 ```
 
-Step 2. Add the dependency
+#### Step 2. Add the dependency
 
 ```groovy
 dependencies {
@@ -39,7 +40,9 @@ dependencies {
 }
 ```
 
-##### 3、使用说明
+
+
+### 3、使用说明
 
 初始化需要设置maxSize，也可以设置isReceiveMaxSize该参数默认为false，详细说明如下：
 
@@ -47,14 +50,14 @@ int maxSize;  // 设置串口读取的最大数据长度
 
 boolean isReceiveMaxSize; // 设置是否接收命令按最大长度进行返回，比如串口协议定义的格式长度为16个字节，这样可以设置maxSize为16，然后设置该参数为true，则接收的命令就会返回16个字节的长度。
 
-**提示：**设置isReceiveMaxSize为true是为了处理命令返回不完整的情况，例如完整命令长度为16，但是串口读的过程分几次返回。
+ **提示：** 设置isReceiveMaxSize为true是为了处理命令返回不完整的情况，例如完整命令长度为16，但是串口读的过程分几次返回。
 
 ```java
 SerialPortHelper serialPortHelper = new SerialPortHelper(32);
 SerialPortHelper serialPortHelper = SerialPortHelper(32,true);
 ```
 
-###### 1.初始化串口
+#### 1.初始化串口
 
 ```java
 //方式一：快速接入方式，设置好串口地址，或者地址和波特率即可，数据位、停止位、校验类型分别默认为8、1、N。
@@ -122,7 +125,7 @@ serialPortHelper.setSphResultCallback(new SphResultCallback() {
 });
 ```
 
-2、数据发送与接收
+#### 2、数据发送与接收
 
 ```java
 // 发送数据
@@ -166,7 +169,7 @@ serialPortHelper.setSphResultCallback(new SphResultCallback() {
 });
 ```
 
-##### 4、关闭串口
+### 4、关闭串口
 
 ```java
 serialPortHelper.closeDevice();
