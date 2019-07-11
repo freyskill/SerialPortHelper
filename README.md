@@ -56,7 +56,7 @@ SerialPortHelper serialPortHelper = new SerialPortHelper(32);
 SerialPortHelper serialPortHelper = SerialPortHelper(32,true);
 ```
 
-#### 1.初始化串口
+#### 3.1.初始化串口
 
 ```java
 //方式一：快速接入方式，设置好串口地址，或者地址和波特率即可，数据位、停止位、校验类型分别默认为8、1、N。
@@ -124,7 +124,7 @@ serialPortHelper.setSphResultCallback(new SphResultCallback() {
 });
 ```
 
-#### 2、数据发送与接收
+#### 3.2、数据发送与接收
 
 ```java
 // 发送数据
