@@ -53,7 +53,7 @@ boolean isReceiveMaxSize; // 设置是否接收命令按最大长度进行返回
 
 ```java
 SerialPortHelper serialPortHelper = new SerialPortHelper(32);
-SerialPortHelper serialPortHelper = SerialPortHelper(32,true);
+SerialPortHelper serialPortHelper = new SerialPortHelper(32,true);
 ```
 
 #### 3.1.初始化串口
@@ -124,7 +124,7 @@ serialPortHelper.setSphResultCallback(new SphResultCallback() {
 });
 ```
 
-#### 3.2、数据发送与接收
+#### 3.2.数据发送与接收
 
 ```java
 // 发送数据
